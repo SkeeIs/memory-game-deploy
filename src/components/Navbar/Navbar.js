@@ -2,21 +2,28 @@ import React from "react";
 import "./Navbar.css";
 
 const Navbar = props => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <h3 className="navbar-brand">Memory Game</h3>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
-            <button className="nav-link" onClick={props.newGame}>New Game</button>
+  <nav className="navbar navbar-expand-lg">
+    <h2 className="title">Dramatic Head Turn Memory Game</h2>
+        <ul>
+        <li>
+          <div className="comms">
+          {props.message}
+          </div>
         </li>
-        <li className="nav-item">
-            <div>Current Score: </div>
+        <li>
+            <div className="render-score">
+              Current Score: {props.score} 
+            </div>
         </li>
-        <li className="nav-item">
-            <div>High Score: </div>
+        <li>
+            <div className="render-high-score">
+              High Score: {props.highScore} 
+            </div>
+        </li>
+        <li>
+            <button className="btn new-game" onClick={props.newGame}>New Game</button>
         </li>
         </ul>
-    </div>
   </nav>    
 );
 

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import "./App.css";
 
+//shuffle helper function
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
       
@@ -17,31 +18,43 @@ const shuffleArray = (array) => {
 
 
 class App extends Component {
+  //the states we will be tracking
   state = {
     gifs,
     score: 0,
     highScore: 0,
-    message: "",
+    message: "Click each gif once to win!",
     clicked: []
   };
-
+  //when we need to shuffle images we will call on helper function
   handleShuffle = () => {
     let shuffledGifs = shuffleArray(gifs);
     this.setState({ friends: shuffledGifs });
   };
-
-  newGame = (event) => {
-    console.log("new game.");
+  //on click of new game reset high score & all other states to starting values
+  resetGame = (event) => {
+    console.log("clear high score. new game.");
     
     this.setState({
       score: 0,
       highScore: 0,
-      message: "Game Over! You already turned that head!",
+      message: "Click each gif once to win!",
       clicked: [],
     });
     this.handleShuffle();
-    }
-
+    };
+    //what gets called when you click the same image twice
+    newGame = (event) => {
+      console.log("new game.");
+      
+      this.setState({
+        score: 0,
+        message: "Game Over! You already turned that head!",
+        clicked: [],
+      });
+      this.handleShuffle();
+      }
+    //essentially our game logic that checks if we've already clicked a gif
     handleClick = id => {
       if (this.state.clicked.length === 0) {
         this.newGame()
@@ -53,7 +66,7 @@ class App extends Component {
         this.newGame();
       }
     };
-
+    //each click of a new gif calls this
     handleIncrement = () => {
       const newScore = this.state.score + 1;
       this.setState({
@@ -69,7 +82,7 @@ class App extends Component {
       this.handleShuffle();
     };
 
-
+  //what we render out to our index.js file
   render() {
     return ( 
       <div>   
@@ -77,7 +90,7 @@ class App extends Component {
           score = {this.state.score}
           highScore = {this.state.highScore}
           message = {this.state.message}
-          newGame={this.newGame}
+          newGame={this.resetGame}
         />
         <Wrapper>
           {this.state.gifs.map(gifs => (
