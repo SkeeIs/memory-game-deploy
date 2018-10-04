@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "gif": "./images/gif01.gif",
+    "gif": "/imgs/gif01.gif",
     "clicked": false  
   },
   {
     "id": 2,
-    "gif": "./images/gif02.gif",
+    "gif": "/imgs/gif02.gif",
     "clicked": false  
   },
   {
     "id": 3,
-    "gif": "./images/gif03.gif",
+    "gif": "/imgs/gif03.gif",
     "clicked": false  
   },
   {
     "id": 4,
-    "gif": "./images/gif04.gif",
+    "gif": "/imgs/gif04.gif",
     "clicked": false  
   },
   {
     "id": 5,
-    "gif": "./images/gif05.gif",
+    "gif": "/imgs/gif05.gif",
     "clicked": false  
   },
   {
     "id": 6,
-    "gif": "./images/gif06.gif",
+    "gif": "/imgs/gif06.gif",
     "clicked": false  
   },
   {
     "id": 7,
-    "gif": "./images/gif07.gif",
+    "gif": "/imgs/gif07.gif",
     "clicked": false  
   },
   {
     "id": 8,
-    "gif": "./images/gif08.gif",
+    "gif": "/imgs/gif08.gif",
     "clicked": false  
   },
   {
     "id": 9,
-    "gif": "./images/gif09.gif",
+    "gif": "/imgs/gif09.gif",
     "clicked": false  
   },
   {
     "id": 10,
-    "gif": "./images/gif10.gif",
+    "gif": "/imgs/gif10.gif",
     "clicked": false  
   },
   {
     "id": 11,
-    "gif": "./images/gif11.gif",
+    "gif": "/imgs/gif11.gif",
     "clicked": false  
   },
   {
     "id": 12,
-    "gif": "./images/gif12.gif",
+    "gif": "/imgs/gif12.gif",
     "clicked": false  
   }
 ]
